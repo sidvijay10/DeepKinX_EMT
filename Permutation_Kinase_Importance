@@ -61,7 +61,7 @@ for kinase_number in range(len(X[0])):
         error_increase = new_score - base_score
         error_increase_list.append(error_increase)
     mean_error = mean(error_increase_list)
-    results.append(mean_error)
+    results.append([kinase_list[kinase_number], mean_error])
     print(kinase_number)
     
 print(results)
