@@ -42,7 +42,7 @@ param_grid = {'batch_size': [1, 2, 4, 8, 16, 32, 44], 'init': ['normal'],
               'activation': ['relu'], 
               'optimizer': ['adam'], 
               'hl': [100]}
-grid = GridSearchCV(estimator=model, param_grid=param_grid, n_jobs= 12, cv=22)
+grid = GridSearchCV(estimator=model, param_grid=param_grid, n_jobs= 10, cv=44)
 grid_result = grid.fit(X2, y2)
 
 print("Best: %f using %s" % (grid_result.best_score_, grid_result.best_params_))
