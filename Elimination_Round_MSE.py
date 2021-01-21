@@ -3,7 +3,7 @@
 """
 Created on Wed Apr 22 16:20:37 2020
 
-@author: vijay
+@author: sid vijay
 """
 
 
@@ -14,10 +14,7 @@ import keras
 from keras.models import Sequential
 from keras.layers import Dense
 from keras.wrappers.scikit_learn import KerasRegressor
-from sklearn.model_selection import GridSearchCV
-from keras.wrappers.scikit_learn import KerasClassifier, KerasRegressor
 from sklearn.metrics import mean_squared_error
-from statistics import mean
 
 response_data2 = pd.read_csv('Huh7_WT_Fzd2.csv')
 drug_list2 = response_data2.iloc[:, 0].values
@@ -42,7 +39,6 @@ y2 = dataset2.iloc[:, 298].values
 
 
 def cross_val():
-
     y_pred_all = []
     y_test_all = []
     for num in range(len(X2)):
@@ -63,9 +59,6 @@ def cross_val():
         y_test_all.append(y_test)
 
     return (y_pred_all)
-
-
-#BEST
 
 y_pred_df = pd.DataFrame(cross_val())
 
