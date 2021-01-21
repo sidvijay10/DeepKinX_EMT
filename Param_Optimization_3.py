@@ -22,11 +22,8 @@ alldrugs2 = pd.read_csv('kir_allDrugs_namesDoses.csv', encoding='latin1')
 
 alldrugs2 = alldrugs2.set_index('compound')
 dataset2 = alldrugs2.loc[drug_list2]
-response2 = response_data2['Huh7 Fzd2'].values
+response2 = response_data2['Huh7_Fzd2'].values
 dataset2["response"] = response2
-
-
-
 
 
 # Importing the dataset
@@ -51,10 +48,10 @@ param_grid = {'batch_size': [2],
               'epochs': [120], 
               'activation': ['elu'], 
               'optimizer': ['adamax'], 
-              'num_hidden_layers': [1,2],
-              'drop_percent': [0.0],
-              'hl': [10, 50]}
-grid = GridSearchCV(estimator=model, param_grid=param_grid, n_jobs= 2, cv= 2)
+              'num_hidden_layers': [1,2,3,4,5,6],
+              'drop_percent': [0.0, 0.25],
+              'hl': [5, 10, 25, 50, 100, 200, 500]}
+grid = GridSearchCV(estimator=model, param_grid=param_grid, n_jobs= 10, cv= 44)
 grid_result = grid.fit(X2, y2)
 
 print("Best: %f using %s" % (grid_result.best_score_, grid_result.best_params_))
