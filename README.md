@@ -11,6 +11,13 @@
 * *Dual_Drug_Prediction.py : Dual Drug Prediction
 * *Three_Drug_Prediction.py : Three Drug Prediction
 
+## Data
+
+* *kir_allDrugs_namesDoses.csv : Drug-Kinase Activity Map
+* *Huh7_WT_Fzd2.csv : Huh7 Response Data
+* *recursive_elimination_kinases_Huh7_Both.csv: list of all profiled kinases in activity map
+
+
 
 ## Prerequisites
 
