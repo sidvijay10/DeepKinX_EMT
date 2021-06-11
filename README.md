@@ -15,7 +15,7 @@
 
 * *kir_allDrugs_namesDoses.csv : Drug-Kinase Activity Map
 * *Huh7_WT_Fzd2.csv : Huh7 Response Data
-* *recursive_elimination_kinases_Huh7_Both.csv: list of all profiled kinases in activity map
+* *recursive_elimination_kinases_Huh7_Both.csv: List of all profiled kinases in activity map
 
 
 
